@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/drawable/corner.xml" value="0.3138888888888889" />
+        <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/layout/activity_main.xml" value="0.2875905797101449" />
+        <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/layout/fragment_email.xml" value="0.2875905797101449" />
+        <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/layout/fragment_facebook.xml" value="0.2875905797101449" />
+        <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/layout/fragment_google.xml" value="0.2875905797101449" />
+        <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/layout/fragment_recycle_view.xml" value="0.20260416666666667" />
+        <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/layout/fragment_sign.xml" value="0.2875905797101449" />
+        <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/layout/recycle_view.xml" value="0.28125" />
+        <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/layout/res_item_bancodedados.xml" value="0.28125" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

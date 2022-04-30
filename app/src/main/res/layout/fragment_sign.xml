@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <TextView
+        android:id="@+id/signin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:gravity="center"
+        android:text="@string/sign_in"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/google_Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signin"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/corner"
+        android:backgroundTint="@color/cinza_fundo"
+        android:gravity="center"
+        android:padding="15dp"
+        android:layout_marginHorizontal="15dp"
+        android:text="@string/sign_google"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:elevation="10dp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="320dp"
+        android:padding="10dp"
+        android:layout_alignStart="@+id/google_Button"
+        android:layout_alignBottom="@+id/google_Button"
+        android:layout_alignTop="@+id/google_Button" />
+
+    <TextView
+        android:id="@+id/facebook_Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/google_Button"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="15dp"
+        android:background="@drawable/corner"
+        android:backgroundTint="#3a5b9b"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="@string/sign_face"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:elevation="10dp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignStart="@+id/facebook_Button"
+        android:layout_alignTop="@+id/facebook_Button"
+        android:layout_alignBottom="@+id/facebook_Button"
+        android:layout_marginEnd="320dp"
+        android:padding="5dp"/>
+
+
+    <TextView
+        android:id="@+id/or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/or"
+        android:textSize="16sp"
+        android:layout_below="@id/facebook_Button"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+
+        />
+
+    <TextView
+        android:id="@+id/email_Button"
+        android:layout_marginHorizontal="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/or"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/corner"
+        android:backgroundTint="@color/email"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="@string/sign_email"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:elevation="10dp"/>
+
+</RelativeLayout>

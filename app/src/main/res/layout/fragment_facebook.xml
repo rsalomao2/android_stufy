@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#fffffd"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.FacebookFragment">
+
+
+    <ImageView
+        android:id="@+id/facebook_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/facebook_login"
+        android:layout_marginTop="90dp"
+        android:layout_marginBottom="100dp"
+        android:padding="20dp"/>
+
+    <EditText
+        android:id="@+id/facebook_email_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/corner"
+        android:elevation="5dp"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textSize="15sp"
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/facebook_senha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/facebook_email_login"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/corner"
+        android:elevation="5dp"
+        android:hint="Senha"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textSize="14sp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/facebook_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/facebook_senha"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/corner"
+        android:backgroundTint="@color/azul"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:inputType="textEmailAddress"
+        android:padding="4dp"
+        android:text="Entrar"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/lost_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/facebook_login"
+        android:layout_marginTop="18sp"
+        android:gravity="center"
+        android:text="Esqueceu a senha?"
+        android:textColor="@color/azul" />
+
+    <View
+        android:id="@+id/linha_esquerda"
+        android:layout_width="160dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/lost_password"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30sp"
+        android:background="@color/cinza_linha" />
+
+    <View
+        android:id="@+id/linha_direita"
+        android:layout_marginTop="30sp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_width="160dp"
+        android:layout_height="1dp"
+        android:background="@color/cinza_linha"
+        android:layout_below="@+id/lost_password"
+
+        />
+
+    <TextView
+        android:id="@+id/text_ou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lost_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:text="ou"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/criarNovaConta"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_ou"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/corner"
+        android:backgroundTint="@color/verde"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Criar nova conta"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
