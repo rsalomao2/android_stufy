@@ -27,6 +27,12 @@ class Email_Fragment : Fragment() {
             findNavController().navigate(R.id.action_email_Fragment_to_recycleView)
         }
 
+        val buttonCreate = viewEmail.findViewById<TextView>(R.id.criarNovaConta)
+        buttonCreate.setOnClickListener() {
+            findNavController().navigate(R.id.action_email_Fragment_to_createAccount)
+        }
+
+
 
         return viewEmail
     }

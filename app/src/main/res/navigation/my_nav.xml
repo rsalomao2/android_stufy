@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_facebookFragment2_to_recycleView"
             app:destination="@id/recycleView" />
+        <action
+            android:id="@+id/action_facebookFragment2_to_createAccount"
+            app:destination="@id/createAccount" />
     </fragment>
     <fragment
         android:id="@+id/googleFragment"
@@ -37,6 +40,9 @@
         <action
             android:id="@+id/action_googleFragment_to_recycleView"
             app:destination="@id/recycleView" />
+        <action
+            android:id="@+id/action_googleFragment_to_createAccount"
+            app:destination="@id/createAccount" />
     </fragment>
     <fragment
         android:id="@+id/email_Fragment"
@@ -46,10 +52,18 @@
         <action
             android:id="@+id/action_email_Fragment_to_recycleView"
             app:destination="@id/recycleView" />
+        <action
+            android:id="@+id/action_email_Fragment_to_createAccount"
+            app:destination="@id/createAccount" />
     </fragment>
     <fragment
         android:id="@+id/recycleView"
         android:name="com.salomao.androidstury.RecycleView"
         android:label="fragment_recycle_view"
         tools:layout="@layout/fragment_recycle_view" />
+    <fragment
+        android:id="@+id/createAccount"
+        android:name="com.salomao.androidstury.createAccount"
+        android:label="fragment_create_account"
+        tools:layout="@layout/fragment_create_account" />
 </navigation>

@@ -5,9 +5,7 @@
     <string name="sign_face">Sign in with Facebook</string>
     <string name="or">or</string>
     <string name="sign_email">Sign in with E-mail</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="text_conect">Facebook</string>
-    <string name="email">Número de celular ou email</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="fone_email">Número de celular ou email</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

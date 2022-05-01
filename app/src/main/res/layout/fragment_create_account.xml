@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".createAccount">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nomeContainer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_marginHorizontal="20dp"
+        app:helperText="Digite seu nome"
+        app:helperTextTextColor="@color/red"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nomeEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Nome"
+            android:inputType="text"
+            android:lines="1"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/sobrenomeContainer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_marginHorizontal="20dp"
+        app:helperText="Digite seu sobrenome"
+        app:helperTextTextColor="@color/red"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nomeContainer"
+        android:layout_marginTop="30dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/sobrenomeEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Sobrenome"
+            android:inputType="textEmailAddress"
+            android:lines="1"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailContainer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_marginHorizontal="20dp"
+        app:helperText="Digite um email"
+        app:helperTextTextColor="@color/red"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sobrenomeContainer"
+        android:layout_marginTop="30dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:lines="1"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/telefoneContainer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_marginHorizontal="20dp"
+        app:helperText="Digite um telefone"
+        app:helperTextTextColor="@color/red"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailContainer"
+        android:layout_marginTop="30dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/telefoneEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Telefone + DDD"
+            android:inputType="textEmailAddress"
+            android:lines="1"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cpfContainer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_marginHorizontal="20dp"
+        app:helperText="Digite seu CPF"
+        app:helperTextTextColor="@color/red"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/telefoneContainer"
+        android:layout_marginTop="30dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cpfEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="CPF"
+            android:inputType="textEmailAddress"
+            android:lines="1"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordContainer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_marginHorizontal="20dp"
+        app:helperText="Digite uma senha"
+        app:helperTextTextColor="@color/red"
+        app:counterEnabled="true"
+        app:counterMaxLength="8"
+        app:passwordToggleEnabled="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cpfContainer"
+        android:layout_marginTop="30dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passworldEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Senha"
+            android:inputType="textEmailAddress"
+            android:lines="1"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/buttonCreateRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/corner"
+        android:backgroundTint="@color/purple_500"
+        android:gravity="center"
+        android:padding="6dp"
+        android:text="REGISTER"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordContainer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
