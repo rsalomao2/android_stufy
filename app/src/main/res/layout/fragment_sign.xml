@@ -7,7 +7,6 @@
     tools:context=".MainActivity">
 
 
-
     <TextView
         android:id="@+id/signin"
         android:layout_width="match_parent"
@@ -38,11 +37,13 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginEnd="320dp"
-        android:padding="10dp"
         android:layout_alignStart="@+id/google_Button"
+        android:layout_alignTop="@+id/google_Button"
         android:layout_alignBottom="@+id/google_Button"
-        android:layout_alignTop="@+id/google_Button" />
+        android:layout_marginEnd="320dp"
+        android:elevation="10dp"
+        android:padding="10dp"
+        android:src="@drawable/googlelogo" />
 
     <TextView
         android:id="@+id/facebook_Button"
@@ -67,7 +68,9 @@
         android:layout_alignTop="@+id/facebook_Button"
         android:layout_alignBottom="@+id/facebook_Button"
         android:layout_marginEnd="320dp"
-        android:padding="5dp"/>
+        android:padding="10dp"
+        android:elevation="10dp"
+        android:src="@drawable/facelogo" />
 
 
     <TextView
@@ -99,3 +102,5 @@
         android:elevation="10dp"/>
 
 </RelativeLayout>
+
+

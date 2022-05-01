@@ -16,5 +16,7 @@ class MainActivity : AppCompatActivity() {
             .findFragmentById(R.id.activity_main) as NavHostFragment
         navController = navHostFragment.navController
 
+
+
     }
 }
