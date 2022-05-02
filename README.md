@@ -36,6 +36,7 @@
   1. Caso o usuário clique em Create Account ele deve ser direcionado para a tela de SignUp conforme layout abaixo
   
   <img width="200" alt="Screen Shot 2022-05-01 at 9 08 01 PM" src="https://user-images.githubusercontent.com/12714219/166170312-f38dca13-95e6-4c21-881e-156b7e09a574.png">
+  
   2. First Name não pode ser vazio e maior que 3 letras
   3. Last name não pode ser vazio e maior que 3 letras
   4. O email deve ser um email valido. Validando casos como `dfasfsdf@.c`, `s@.er, etc
