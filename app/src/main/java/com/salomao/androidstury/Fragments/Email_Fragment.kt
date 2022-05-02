@@ -33,7 +33,6 @@ class Email_Fragment : Fragment() {
         }
 
 
-
         return viewEmail
     }
 
