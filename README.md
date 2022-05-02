@@ -8,8 +8,8 @@
 6. git pull origin
 
 ## Criar branch com seu nome
-1. git checkout -b <seu nome>
-2. git push origin <seu nome>
+1. git checkout -b `<seu nome>`
+2. git push origin `<seu nome>`
 
   
 ## Login Screen
