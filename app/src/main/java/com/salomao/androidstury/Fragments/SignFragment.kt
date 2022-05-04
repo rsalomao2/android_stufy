@@ -10,7 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.salomao.androidstury.R
 
 
-class signFragment : Fragment() {
+class SignFragment : Fragment() {
 
 
     override fun onCreateView(
