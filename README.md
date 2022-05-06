@@ -46,6 +46,3 @@
   8. Deve haver uma botão em que a senha é revelada.
   9. Ao clicar no botão registrar todos os campos devem ser validado. Casos todos estejam corretos, o usuario deve ser direcionado para tela de login
   10. Caso algum campo contenha erro, uma messagem deve descriminar o erro em baixo do campo com problema.
-  
-
-  
