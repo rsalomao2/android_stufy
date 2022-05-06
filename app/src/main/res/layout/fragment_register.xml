@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     android:layout_margin="12dp"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".RegisterFragment">
 
     <com.google.android.material.textfield.TextInputLayout
@@ -16,9 +16,11 @@
         android:hint="Phone Number + DDD">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etFone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom" />
+            android:layout_gravity="bottom"
+            android:inputType="number" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
