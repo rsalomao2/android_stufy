@@ -11,44 +11,14 @@
         android:label="fragment_sign"
         tools:layout="@layout/fragment_sign" >
         <action
-            android:id="@+id/action_signFragment_to_facebookFragment2"
-            app:destination="@id/facebookFragment2" />
-        <action
-            android:id="@+id/action_signFragment_to_googleFragment"
-            app:destination="@id/googleFragment" />
-        <action
             android:id="@+id/action_signFragment_to_email_Fragment"
-            app:destination="@id/email_Fragment" />
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
-        android:id="@+id/facebookFragment2"
-        android:name="com.salomao.androidstury.Fragments.FacebookFragment"
-        android:label="fragment_facebook"
-        tools:layout="@layout/fragment_facebook" >
-        <action
-            android:id="@+id/action_facebookFragment2_to_recycleView"
-            app:destination="@id/recycleView" />
-        <action
-            android:id="@+id/action_facebookFragment2_to_createAccount"
-            app:destination="@id/createAccount" />
-    </fragment>
-    <fragment
-        android:id="@+id/googleFragment"
-        android:name="com.salomao.androidstury.Fragments.GoogleFragment"
-        android:label="fragment_google"
-        tools:layout="@layout/fragment_google" >
-        <action
-            android:id="@+id/action_googleFragment_to_recycleView"
-            app:destination="@id/recycleView" />
-        <action
-            android:id="@+id/action_googleFragment_to_createAccount"
-            app:destination="@id/createAccount" />
-    </fragment>
-    <fragment
-        android:id="@+id/email_Fragment"
-        android:name="com.salomao.androidstury.Fragments.Email_Fragment"
-        android:label="fragment_email"
-        tools:layout="@layout/fragment_email" >
+        android:id="@+id/loginFragment"
+        android:name="com.salomao.androidstury.Fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_email_Fragment_to_recycleView"
             app:destination="@id/recycleView" />

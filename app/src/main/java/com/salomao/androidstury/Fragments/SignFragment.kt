@@ -24,13 +24,13 @@ class SignFragment : Fragment() {
         // Botão do Face
         val buttonFace = viewSign.findViewById<TextView>(R.id.facebook_Button)
         buttonFace.setOnClickListener {
-            findNavController().navigate(R.id.action_signFragment_to_facebookFragment2)
+            findNavController().navigate(R.id.action_signFragment_to_email_Fragment)
         }
 
         // Botão do Google
         val buttonGoogle = viewSign.findViewById<TextView>(R.id.google_Button)
         buttonGoogle.setOnClickListener {
-            findNavController().navigate(R.id.action_signFragment_to_googleFragment)
+            findNavController().navigate(R.id.action_signFragment_to_email_Fragment)
         }
 
         //Botão do Email

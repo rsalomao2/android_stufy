@@ -6,6 +6,14 @@
     <string name="or">or</string>
     <string name="sign_email">Sign in with E-mail</string>
     <string name="text_conect">Facebook</string>
-    <string name="fone_email">Número de celular ou email</string>
+    <string name="fone_email">Email</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="password">Password</string>
+    <string name="nome">Nome</string>
+    <string name="sobrenome">Sobrenome</string>
+    <string name="email">Email</string>
+    <string name="telefone_ddd">Telefone + DDD</string>
+    <string name="cpf">CPF</string>
+    <string name="senha">Senha</string>
+    <string name="registrar">REGISTRAR</string>
 </resources>

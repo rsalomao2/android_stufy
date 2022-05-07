@@ -10,17 +10,17 @@ import androidx.navigation.fragment.findNavController
 import com.salomao.androidstury.R
 
 
-class Email_Fragment : Fragment() {
+class LoginFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?): View? {
 
         // Inflate the layout for this fragment
-        val viewEmail = inflater.inflate(R.layout.fragment_email, container, false)
+        val viewEmail = inflater.inflate(R.layout.fragment_login, container, false)
 
 
-        val buttonLogin = viewEmail.findViewById<TextView>(R.id.facebook_login)
+        val buttonLogin = viewEmail.findViewById<TextView>(R.id.tvLogin)
         buttonLogin.setOnClickListener() {
             findNavController().navigate(R.id.action_email_Fragment_to_recycleView)
         }

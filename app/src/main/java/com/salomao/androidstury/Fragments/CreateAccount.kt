@@ -31,6 +31,10 @@ class CreateAccount : Fragment() {
     private var cpfText: TextInputEditText? = null
     private var cpfTextContainer: TextInputLayout? = null
 
+    private var passwordText: TextInputEditText? = null
+    private var passwordContainer: TextInputLayout? = null
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -44,12 +48,16 @@ class CreateAccount : Fragment() {
         val buttonCreateAcc = view.findViewById<TextView>(R.id.buttonCreateRegister)
 
         findViewID()
-        phoneMask()
-
+        masks()
 
         buttonCreateAcc?.setOnClickListener {
             Validates()
         }
+    }
+
+    private fun masks() {
+        phoneMask()
+        cpfMask()
     }
 
     private fun findViewID() {
@@ -68,15 +76,40 @@ class CreateAccount : Fragment() {
         cpfText = view?.findViewById<TextInputEditText>(R.id.cpfEditText)
         cpfTextContainer = view?.findViewById<TextInputLayout>(R.id.cpfContainer)
 
+        passwordText = view?.findViewById<TextInputEditText>(R.id.passworldEditText)
+        passwordContainer = view?.findViewById<TextInputLayout>(R.id.passwordContainer)
+
     }
+
 
     private fun Validates() {
         nameCheck()
         lastNameCheck()
         emailCheck()
         phoneCheck()
-
+        cpfCheck()
+        passwordCheck()
     }
+
+
+    private fun passwordCheck() {
+        val password = passwordText?.text
+        val passwordLenght = passwordText?.text?.length
+
+        if (passwordLenght != null && passwordLenght < 9) {
+            passwordContainer?.error = "A senha precisa conter 9 caracteres"
+        } else if (password?.matches(".*[A-Z].*".toRegex()) == false) {
+            passwordContainer?.error = "A senha precisa conter uma letra maiúscula"
+        } else if (password?.matches(".*[a-z].*".toRegex()) == false) {
+            passwordContainer?.error = "A senha precisa conter uma letra minúscula"
+        } else if (password?.matches(".*[!@#$%^&*+=/?].*".toRegex()) == false) {
+            passwordContainer?.error = "A senha precisa conter uma caracter especial"
+        } else if (password?.matches(".*[0-9].*".toRegex()) == false) {
+            passwordContainer?.error = "A senha precisa conter uma caracter um numero"
+        } else passwordContainer?.error = null
+    }
+
+
 
     private fun nameCheck(){
         val nameLength = nameText?.text?.length
@@ -111,7 +144,7 @@ class CreateAccount : Fragment() {
 
     private fun phoneMask() {
         //(41)98844-4123
-        foneEditText?.let { editText ->
+        phoneText?.let { editText ->
             editText.addTextChangedListener(Mask.insert("(##)#####-####", editText))
         }
     }
@@ -121,9 +154,28 @@ class CreateAccount : Fragment() {
         val phoneInput = phoneText?.text.toString()
         if (phoneInput.isBlank()){
             phoneTextContainer?.error = "Campo obrigatório"
-        }else if (phoneInputLenght.toString() != "" && phoneInputLenght!! < 11){
+        }else if (phoneInputLenght.toString() != "" && phoneInputLenght!! != 14){
             phoneTextContainer?.error = "Telefone inválido"
         } else
             phoneTextContainer?.error = null
     }
+
+    private fun cpfMask() {
+        //(41)98844-4123
+        cpfText?.let { editText ->
+            editText.addTextChangedListener(Mask.insert("###.###.###-##", editText))
+        }
+    }
+
+    private fun cpfCheck() {
+        val cpfInputLenght = cpfText?.length()
+        val phoneInput = cpfText?.text.toString()
+        if (phoneInput.isBlank()) {
+            cpfTextContainer?.error = "Campo obrigatório"
+        } else if (cpfInputLenght.toString() != "" && cpfInputLenght!! != 14) {
+            cpfTextContainer?.error = "CPF inválido"
+        } else
+            cpfTextContainer?.error = null
+    }
 }
+
