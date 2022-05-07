@@ -44,6 +44,7 @@ class CreateAccount : Fragment() {
         val buttonCreateAcc = view.findViewById<TextView>(R.id.buttonCreateRegister)
 
         findViewID()
+        phoneMask()
 
 
         buttonCreateAcc?.setOnClickListener {
@@ -74,7 +75,6 @@ class CreateAccount : Fragment() {
         lastNameCheck()
         emailCheck()
         phoneCheck()
-        phoneMask()
 
     }
 
@@ -111,7 +111,7 @@ class CreateAccount : Fragment() {
 
     private fun phoneMask() {
         //(41)98844-4123
-        phoneText?.let { editText ->
+        foneEditText?.let { editText ->
             editText.addTextChangedListener(Mask.insert("(##)#####-####", editText))
         }
     }
@@ -120,10 +120,10 @@ class CreateAccount : Fragment() {
         val phoneInputLenght = phoneText?.length()
         val phoneInput = phoneText?.text.toString()
         if (phoneInput.isBlank()){
-            foneContainer.error = "Campo obrigatório"
+            phoneTextContainer?.error = "Campo obrigatório"
         }else if (phoneInputLenght.toString() != "" && phoneInputLenght!! < 11){
-            foneContainer.error = "Telefone inválido"
+            phoneTextContainer?.error = "Telefone inválido"
         } else
-            foneContainer.error = null
+            phoneTextContainer?.error = null
     }
 }
