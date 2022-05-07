@@ -20,8 +20,6 @@ class Email_Fragment : Fragment() {
         val viewEmail = inflater.inflate(R.layout.fragment_email, container, false)
 
 
-        //Button
-
         val buttonLogin = viewEmail.findViewById<TextView>(R.id.facebook_login)
         buttonLogin.setOnClickListener() {
             findNavController().navigate(R.id.action_email_Fragment_to_recycleView)
