@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#f6f6f6"
     android:layout_height="match_parent"
     tools:context=".Fragments.LoginFragment">
 
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/rlWidget"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,45 +16,64 @@
         android:layout_alignParentBottom="true"
         android:layout_marginHorizontal="12dp"
         android:layout_marginTop="175dp"
-        android:layout_marginBottom="275dp"
+        android:layout_marginBottom="250dp"
         android:background="@drawable/corner"
         android:elevation="50dp">
 
-
-        <EditText
-            android:id="@+id/tvEmail"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/loginEmailContainer"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_marginHorizontal="20dp"
+            app:helperText=" "
+            app:helperTextTextColor="@color/red"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/corner"
-            android:hint="@string/fone_email"
-            android:inputType="textEmailAddress"
-            android:padding="15dp"
-            android:textSize="15sp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp">
 
-        <EditText
-            android:id="@+id/facebook_senha"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/loginEmailText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/email"
+                android:inputType="text"
+                android:lines="1"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/loginPasswordContainer"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_marginHorizontal="20dp"
+            app:helperTextTextColor="@color/red"
+            app:helperText=" "
+            app:passwordToggleEnabled="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tvEmail"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="6dp"
-            android:background="@drawable/corner"
-            android:hint="@string/password"
-            android:inputType="textEmailAddress"
-            android:padding="15dp"
-            android:textSize="14sp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loginEmailContainer"
+            android:layout_marginTop="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/loginPasswordText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/senha"
+                android:inputType="textEmailAddress"
+                android:lines="1"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
 
         <TextView
+            app:layout_constraintTop_toBottomOf="@+id/loginPasswordContainer"
             android:id="@+id/tvLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/facebook_senha"
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/corner"
@@ -65,26 +85,27 @@
             android:text="SIGNIN"
             android:textColor="@color/white"
             android:textSize="18sp"
-            android:textStyle="bold"
-            tools:ignore="TouchTargetSizeCheck" />
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/criarNovaConta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tvLogin"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
             android:background="@drawable/corner"
             android:backgroundTint="@color/verde"
-            android:gravity="center"
             android:padding="12dp"
             android:text="Create new account"
             android:textColor="@color/white"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLogin" />
 
-    </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
