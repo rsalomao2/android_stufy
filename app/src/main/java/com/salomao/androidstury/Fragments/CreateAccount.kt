@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import com.salomao.androidstury.Mask
@@ -83,63 +84,114 @@ class CreateAccount : Fragment() {
 
 
     private fun Validates() {
+
         nameCheck()
         lastNameCheck()
         emailCheck()
         phoneCheck()
         cpfCheck()
         passwordCheck()
+
+        if (nameCheck() && lastNameCheck() && emailCheck() && phoneCheck() && cpfCheck() && passwordCheck()){
+            Toast.makeText(requireContext(), "esta ok", Toast.LENGTH_SHORT).show()
+        } else
+            Toast.makeText(requireContext(), "nao esta ok", Toast.LENGTH_SHORT).show()
     }
 
 
-    private fun passwordCheck() {
+    private fun passwordCheck(): Boolean {
         val password = passwordText?.text
         val passwordLenght = passwordText?.text?.length
 
-        if (passwordLenght != null && passwordLenght < 9) {
-            passwordContainer?.error = "A senha precisa conter 9 caracteres"
-        } else if (password?.matches(".*[A-Z].*".toRegex()) == false) {
-            passwordContainer?.error = "A senha precisa conter uma letra maiúscula"
-        } else if (password?.matches(".*[a-z].*".toRegex()) == false) {
-            passwordContainer?.error = "A senha precisa conter uma letra minúscula"
-        } else if (password?.matches(".*[!@#$%^&*+=/?].*".toRegex()) == false) {
-            passwordContainer?.error = "A senha precisa conter uma caracter especial"
-        } else if (password?.matches(".*[0-9].*".toRegex()) == false) {
-            passwordContainer?.error = "A senha precisa conter uma caracter um numero"
-        } else passwordContainer?.error = null
+        val isValidPassword1 = passwordLenght != null && passwordLenght < 9
+        val isValidPassword2 = password?.matches(".*[A-Z].*".toRegex()) == false
+        val isValidPassword3 = password?.matches(".*[a-z].*".toRegex()) == false
+        val isValidPassword4 = password?.matches(".*[!@#$%^&*+=/?].*".toRegex()) == false
+        val isValidPassword5 = password?.matches(".*[0-9].*".toRegex()) == false
+
+        when {
+            isValidPassword1 -> {
+                passwordContainer?.error = "A senha precisa conter 9 caracteres"
+            }
+            isValidPassword2 -> {
+                passwordContainer?.error = "A senha precisa conter uma letra maiúscula"
+            }
+            isValidPassword3 -> {
+                passwordContainer?.error = "A senha precisa conter uma letra minúscula"
+            }
+            isValidPassword4 -> {
+                passwordContainer?.error = "A senha precisa conter um caracter especial"
+            }
+            isValidPassword5 -> {
+                passwordContainer?.error = "A senha precisa conter um numero"
+            }
+            else -> passwordContainer?.error = null
+        }
+
+        return !isValidPassword1 && !isValidPassword2 && !isValidPassword3 && !isValidPassword4 && !isValidPassword5
+
     }
 
 
 
-    private fun nameCheck(){
+    private fun nameCheck(): Boolean {
         val nameLength = nameText?.text?.length
         val nameBlank = nameText?.text
-        if (nameBlank!!.isBlank()) {
-            nameTextContainer?.error = "Campo obrigatório"
-        } else if (nameLength.toString() != "" && nameLength!! > 0 && nameLength < 4) {
-            nameTextContainer?.error = "Nome muito curto"
-        } else
-            nameTextContainer?.error = null
+
+        val isValidName1 = nameBlank!!.isBlank()
+        val isValidName2 = nameLength.toString() != "" && nameLength!! > 0 && nameLength < 4
+
+        when {
+            isValidName1 -> {
+                nameTextContainer?.error = "Campo obrigatório"
+            }
+            isValidName2 -> {
+                nameTextContainer?.error = "Nome muito curto"
+            }
+            else -> nameTextContainer?.error = null
+        }
+
+        return !isValidName1 && !isValidName2
     }
 
-    private fun lastNameCheck(){
+
+
+
+    private fun lastNameCheck(): Boolean {
         val lastNameLength = lastNameText?.text?.length
         val lastNameBlank = lastNameText?.text
-        if (lastNameBlank!!.isBlank()) {
+
+        val isValidLastName1 = lastNameBlank!!.isBlank()
+        val isValidLastName2 = lastNameLength.toString() != "" && lastNameLength!! > 0 && lastNameLength < 4
+
+
+        when {
+            isValidLastName1 -> {
             lastNameTextContainer?.error = "Campo obrigatório"
-        } else if (lastNameLength.toString() != "" && lastNameLength!! > 0 && lastNameLength < 4) {
+            }
+            isValidLastName2 -> {
             lastNameTextContainer?.error = "Nome muito curto"
-        } else
-            lastNameTextContainer?.error = null
+            }
+            else -> lastNameTextContainer?.error = null
+        }
+        return !isValidLastName1 && !isValidLastName2
     }
 
 
-    private fun emailCheck() {
+    private fun emailCheck(): Boolean {
         val emailCheck = emailText?.text.toString()
-        if (!Patterns.EMAIL_ADDRESS.matcher(emailCheck).matches()) {
-            emailTextContainer?.error = "Email inválido"
-        } else
-            emailTextContainer?.error = null
+
+        val isValidEmail = !Patterns.EMAIL_ADDRESS.matcher(emailCheck).matches()
+
+        when {
+            isValidEmail -> {
+                emailTextContainer?.error = "Email inválido"
+            }
+            else -> emailTextContainer?.error = null
+        }
+
+        return !isValidEmail
+
     }
 
     private fun phoneMask() {
@@ -149,15 +201,24 @@ class CreateAccount : Fragment() {
         }
     }
 
-    private fun phoneCheck(){
+    private fun phoneCheck(): Boolean {
         val phoneInputLenght = phoneText?.length()
         val phoneInput = phoneText?.text.toString()
-        if (phoneInput.isBlank()){
-            phoneTextContainer?.error = "Campo obrigatório"
-        }else if (phoneInputLenght.toString() != "" && phoneInputLenght!! != 14){
-            phoneTextContainer?.error = "Telefone inválido"
-        } else
-            phoneTextContainer?.error = null
+
+        val isValidPhone1 = phoneInput.isBlank()
+        val isValidPhone2 = phoneInputLenght.toString() != "" && phoneInputLenght!! != 14
+
+        when {
+            isValidPhone1 -> {
+                phoneTextContainer?.error = "Campo obrigatório"
+            }
+            isValidPhone2 -> {
+                phoneTextContainer?.error = "Telefone inválido"
+            }
+            else -> phoneTextContainer?.error = null
+        }
+
+       return !isValidPhone1 && !isValidPhone2
     }
 
     private fun cpfMask() {
@@ -167,15 +228,25 @@ class CreateAccount : Fragment() {
         }
     }
 
-    private fun cpfCheck() {
+    private fun cpfCheck(): Boolean {
         val cpfInputLenght = cpfText?.length()
         val phoneInput = cpfText?.text.toString()
-        if (phoneInput.isBlank()) {
-            cpfTextContainer?.error = "Campo obrigatório"
-        } else if (cpfInputLenght.toString() != "" && cpfInputLenght!! != 14) {
-            cpfTextContainer?.error = "CPF inválido"
-        } else
-            cpfTextContainer?.error = null
+
+        val isValidCpf1 = phoneInput.isBlank()
+        val isValidCpf2 = cpfInputLenght.toString() != "" && cpfInputLenght!! != 14
+
+        when {
+            isValidCpf1 -> {
+                cpfTextContainer?.error = "Campo obrigatório"
+            }
+            isValidCpf2 -> {
+                cpfTextContainer?.error = "CPF inválido"
+            }
+            else -> cpfTextContainer?.error = null
+        }
+
+        return !isValidCpf1 && !isValidCpf2
     }
+
 }
 
