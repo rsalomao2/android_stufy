@@ -1,9 +1,7 @@
 package com.salomao.androidstury
 
 import android.text.Editable
-
 import android.text.TextWatcher
-
 import android.widget.EditText
 import java.lang.Exception
 
