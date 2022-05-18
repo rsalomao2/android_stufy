@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/signFragment"
-        android:name="com.salomao.androidstury.Fragments.SignFragment"
+        android:name="com.salomao.androidstury.fragments.SignFragment"
         android:label="fragment_sign"
         tools:layout="@layout/fragment_sign" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.salomao.androidstury.Fragments.LoginFragment"
+        android:name="com.salomao.androidstury.fragments.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login">
         <action
@@ -33,7 +33,7 @@
         tools:layout="@layout/fragment_recycle_view" />
     <fragment
         android:id="@+id/createAccount"
-        android:name="com.salomao.androidstury.Fragments.CreateAccount"
+        android:name="com.salomao.androidstury.fragments.CreateAccount"
         android:label="fragment_create_account"
         tools:layout="@layout/fragment_create_account" />
 </navigation>

@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.salomao.androidstury.Models.AdapterBD
-import com.salomao.androidstury.Models.DataSorce
+import com.salomao.androidstury.models.AdapterBD
+import com.salomao.androidstury.models.DataSorce
 
 
 class RecycleView : Fragment() {

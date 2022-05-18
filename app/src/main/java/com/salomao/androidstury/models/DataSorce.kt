@@ -1,4 +1,4 @@
-package com.salomao.androidstury.Models
+package com.salomao.androidstury.models
 
 class DataSorce {
 

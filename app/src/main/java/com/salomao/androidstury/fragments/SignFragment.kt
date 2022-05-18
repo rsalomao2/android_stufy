@@ -1,4 +1,4 @@
-package com.salomao.androidstury.Fragments
+package com.salomao.androidstury.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

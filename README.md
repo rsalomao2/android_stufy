@@ -7,21 +7,21 @@
 5. git remote add origin https://github.com/rsalomao2/android_stufy.git
 6. git pull origin
 
-## Criar branch com seu nome
-1. git checkout -b `<seu nome>`
-2. git push origin `<seu nome>`
-
+  ## Criar branch com seu nome
+  1. git checkout -b `<seu nome>`
+  2. git push origin `<seu nome>`
   
-## Login Screen
-  
-1. Crie uma tela de login de acordo com design abaixo
-  
-<img src="https://user-images.githubusercontent.com/12714219/166169962-e089b6ea-b694-4736-830e-9e5397f57a96.png" width="200" height="400" />
-  
-2. Ao clicar em qualquer item é chamado uma segunda tela usando Activity
-3. Ao clicar em qualquer item é chamado uma segunda tela usando Fragment
-  
-# Login with email Screen
+    
+  ## Login Screen
+    
+  1. Crie uma tela de login de acordo com design abaixo
+    
+  <img src="https://user-images.githubusercontent.com/12714219/166169962-e089b6ea-b694-4736-830e-9e5397f57a96.png" width="200" height="400" />
+    
+  2. Ao clicar em qualquer item é chamado uma segunda tela usando Activity
+  3. Ao clicar em qualquer item é chamado uma segunda tela usando Fragment
+    
+  # Login with email Screen
   1. Ao clicar no botão Login with email o usuário sera direcionado para tela de login usando um email e senha com layout abaixo
   
   <img width="200" alt="Screen Shot 2022-05-01 at 9 03 12 PM" src="https://user-images.githubusercontent.com/12714219/166170127-26e479bb-c331-48af-9e63-91504ce44282.png">

@@ -1,4 +1,4 @@
-package com.salomao.androidstury.Models
+package com.salomao.androidstury.models
 
 import android.view.LayoutInflater
 import android.view.View
