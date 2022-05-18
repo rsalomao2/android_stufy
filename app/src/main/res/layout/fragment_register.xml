@@ -6,7 +6,7 @@
     android:layout_margin="12dp"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".RegisterFragment">
+    tools:context=".fragments.RegisterFragment">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textField"

@@ -3,21 +3,28 @@ package com.salomao.androidstury.models
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.salomao.androidstury.R
 import kotlinx.android.synthetic.main.res_item_bancodedados.view.*
 
-class AdapterBD: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class AdapterBD(
+    private val listener: OnItemClickListener
+): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private var items: List<Referencias> = ArrayList()
 
+    interface OnItemClickListener {
+        fun onClick(item: Referencias)
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return ReferenciasViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.res_item_bancodedados, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.res_item_bancodedados, parent, false),
+            listener
         )
-
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
@@ -35,13 +42,12 @@ class AdapterBD: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     fun setDataSet(referenc: List<Referencias>){
-
         this.items = referenc
-
     }
 
     class ReferenciasViewHolder constructor(
-        itemView: View
+        itemView: View,
+        val listener: OnItemClickListener
     ): RecyclerView.ViewHolder(itemView) {
 
         private val referenciaName = itemView.person_name
@@ -67,8 +73,9 @@ class AdapterBD: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                 .load(referencia.imagem)
                 .into(referenciaImagem)
 
+            itemView.setOnClickListener {
+                listener.onClick(referencia)
+            }
         }
-
     }
-
 }

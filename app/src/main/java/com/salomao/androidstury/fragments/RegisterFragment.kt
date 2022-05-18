@@ -1,4 +1,4 @@
-package com.salomao.androidstury
+package com.salomao.androidstury.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,8 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.android.material.textfield.TextInputEditText
+import com.salomao.androidstury.Mask
+import com.salomao.androidstury.R
 
 
 class RegisterFragment : Fragment() {

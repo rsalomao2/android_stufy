@@ -87,5 +87,6 @@ class LoginFragment : Fragment() {
         if (isEmailValid(imputedEmail) && isPasswordValid(imputedPassword)) {
             findNavController().navigate(R.id.action_email_Fragment_to_recycleView)
         }
+        findNavController().navigate(R.id.action_email_Fragment_to_recycleView)
     }
 }
