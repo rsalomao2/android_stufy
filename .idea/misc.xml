@@ -4,15 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/drawable/corner.xml" value="0.337037037037037" />
-        <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/layout/activity_main.xml" value="0.1762917933130699" />
+        <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/layout/fragment_create_account.xml" value="0.33" />
+        <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/layout/fragment_detail.xml" value="0.25" />
         <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/layout/fragment_email.xml" value="0.3625" />
         <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/layout/fragment_facebook.xml" value="0.3625" />
         <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/layout/fragment_google.xml" value="0.3625" />
         <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/layout/fragment_login.xml" value="0.33469202898550726" />
         <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/layout/fragment_recycle_view.xml" value="0.3625" />
-        <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/layout/fragment_sign.xml" value="0.3625" />
+        <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/layout/fragment_sign.xml" value="0.25" />
         <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/layout/res_item_bancodedados.xml" value="0.32382246376811596" />
+        <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/layout/testando.xml" value="0.29981884057971014" />
       </map>
     </option>
   </component>

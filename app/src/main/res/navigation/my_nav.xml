@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/signFragment"
-        android:name="com.salomao.androidstury.Fragments.SignFragment"
+        android:name="com.salomao.androidstury.fragments.SignFragment"
         android:label="fragment_sign"
         tools:layout="@layout/fragment_sign" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.salomao.androidstury.Fragments.LoginFragment"
+        android:name="com.salomao.androidstury.fragments.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login">
         <action
@@ -28,12 +28,21 @@
     </fragment>
     <fragment
         android:id="@+id/recycleView"
-        android:name="com.salomao.androidstury.RecycleView"
+        android:name="com.salomao.androidstury.fragments.HomeFragment"
         android:label="fragment_recycle_view"
-        tools:layout="@layout/fragment_recycle_view" />
+        tools:layout="@layout/fragment_recycle_view" >
+        <action
+            android:id="@+id/action_recycleView_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/createAccount"
-        android:name="com.salomao.androidstury.Fragments.CreateAccount"
+        android:name="com.salomao.androidstury.fragments.CreateAccount"
         android:label="fragment_create_account"
         tools:layout="@layout/fragment_create_account" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.salomao.androidstury.fragments.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" />
 </navigation>

@@ -1,4 +1,4 @@
-package com.salomao.androidstury.Fragments
+package com.salomao.androidstury.fragments
 
 import android.os.Bundle
 import android.util.Patterns
@@ -12,7 +12,6 @@ import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import com.salomao.androidstury.Mask
 import com.salomao.androidstury.R
-import kotlinx.android.synthetic.main.fragment_create_account.*
 
 
 class CreateAccount : Fragment() {

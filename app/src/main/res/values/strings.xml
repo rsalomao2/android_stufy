@@ -16,4 +16,8 @@
     <string name="cpf">CPF</string>
     <string name="senha">Senha</string>
     <string name="registrar">REGISTRAR</string>
+    <string name="input_email">Email:</string>
+    <string name="input_cpf">Cpf:</string>
+    <string name="input_phone">Telefone:</string>
+    <string name="input_name">Nome:</string>
 </resources>
