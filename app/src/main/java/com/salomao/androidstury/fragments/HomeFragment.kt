@@ -45,7 +45,6 @@ class HomeFragment : Fragment() {
     }
 
     private fun addDataSource() {
-
         val dataSource = DataSorce.createDataSet()
         this.adapterBD.setDataSet(dataSource)
     }
@@ -54,7 +53,7 @@ class HomeFragment : Fragment() {
         val listener = object: AdapterBD.OnItemClickListener{
             override fun onClick(item: References) {
                 val bundle = Bundle()
-                bundle.putSerializable("item", item)
+                bundle.putInt("itemID", item.id)
                 findNavController().navigate(R.id.action_recycleView_to_detailFragment, bundle)
             }
 
