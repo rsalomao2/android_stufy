@@ -14,5 +14,7 @@
     <color name="azul">#1d7bec</color>
     <color name="email">#029688</color>
     <color name="red">#960202</color>
+    <color name="colorPrimary">#a51e22</color>
+    <color name="colorPrimaryDarkk">#800000</color>
 
 </resources>

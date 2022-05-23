@@ -8,4 +8,6 @@ data class References(
     var telefone: String,
     var cpf: String,
     var email: String,
+    var textBio: String,
+
     ) : Serializable

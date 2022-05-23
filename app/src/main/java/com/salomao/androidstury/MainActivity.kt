@@ -1,5 +1,6 @@
 package com.salomao.androidstury
 
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
@@ -15,8 +16,6 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.activity_main) as NavHostFragment
         navController = navHostFragment.navController
-
-
 
     }
 }

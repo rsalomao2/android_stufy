@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -19,6 +20,9 @@ class HomeFragment : Fragment() {
     private lateinit var adapterBD: AdapterBD
     private lateinit var recyclerview: RecyclerView
 
+    override fun onStart() {
+        super.onStart()
+        (activity as AppCompatActivity).supportActionBar!!.show()}
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,6 +38,7 @@ class HomeFragment : Fragment() {
         initRecyclerView()
         addDataSource()
     }
+
 
     private fun initView(view: View) {
         recyclerview = view.findViewById<RecyclerView>(R.id.recyclerview)
@@ -52,6 +57,7 @@ class HomeFragment : Fragment() {
                 bundle.putSerializable("item", item)
                 findNavController().navigate(R.id.action_recycleView_to_detailFragment, bundle)
             }
+
         }
 
         this.adapterBD = AdapterBD(listener)
@@ -61,4 +67,5 @@ class HomeFragment : Fragment() {
         recyclerview.adapter = this.adapterBD
 
     }
+
 }
