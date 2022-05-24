@@ -35,7 +35,8 @@ class LoginFragment : Fragment() {
     private fun isEmailValid(emailImputed: String): Boolean {
         val listOfValidEmails = listOf(
             "rafael@hotmail.com",
-            "a@b.c"
+            "a@b.c",
+            "1"
         )
         return if (listOfValidEmails.contains(emailImputed)){
             containerEmail?.error = null
@@ -49,7 +50,8 @@ class LoginFragment : Fragment() {
     private fun isPasswordValid(isValidPassword: String): Boolean {
         val listOfValidPwd = listOf(
             "12345",
-            "123"
+            "123",
+            "1"
         )
         return if (listOfValidPwd.contains(isValidPassword)){
             containerPassword?.error = null
@@ -87,6 +89,5 @@ class LoginFragment : Fragment() {
         if (isEmailValid(imputedEmail) && isPasswordValid(imputedPassword)) {
             findNavController().navigate(R.id.action_email_Fragment_to_recycleView)
         }
-        findNavController().navigate(R.id.action_email_Fragment_to_recycleView)
     }
 }

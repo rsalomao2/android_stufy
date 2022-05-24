@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.CreateAccount">
+    tools:context=".fragments.CreateAccount"
+    style="@style/Theme.MaterialComponents.Light"
+    android:theme="@style/Theme.MaterialComponents.Light">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/nameContainer"
@@ -40,7 +42,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/nameContainer"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="25dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/lastNameEditText"
@@ -64,7 +66,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/lastNameContainer"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="25dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/emailEditText"
@@ -88,7 +90,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/emailContainer"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="25dp">
     
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/foneEditText"
@@ -110,7 +112,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/foneContainer"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="25dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/cpfEditText"
@@ -135,7 +137,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cpfContainer"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="25dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/passworldEditText"

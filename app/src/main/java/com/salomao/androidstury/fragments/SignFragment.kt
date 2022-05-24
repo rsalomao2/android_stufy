@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.salomao.androidstury.R
@@ -12,6 +13,9 @@ import com.salomao.androidstury.R
 
 class SignFragment : Fragment() {
 
+    override fun onStart() {
+        super.onStart()
+        (activity as AppCompatActivity).supportActionBar!!.show()}
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

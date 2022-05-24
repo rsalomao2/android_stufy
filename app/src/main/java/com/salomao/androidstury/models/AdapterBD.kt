@@ -3,21 +3,19 @@ package com.salomao.androidstury.models
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.salomao.androidstury.R
 import kotlinx.android.synthetic.main.res_item_bancodedados.view.*
 
-class AdapterBD(
-    private val listener: OnItemClickListener
-): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class AdapterBD (private val listener: OnItemClickListener):
+    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private var items: List<Referencias> = ArrayList()
+    private var items: List<References> = ArrayList()
 
     interface OnItemClickListener {
-        fun onClick(item: Referencias)
+        fun onClick(item:References)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -25,6 +23,7 @@ class AdapterBD(
             LayoutInflater.from(parent.context).inflate(R.layout.res_item_bancodedados, parent, false),
             listener
         )
+
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
@@ -41,28 +40,30 @@ class AdapterBD(
         return items.size
     }
 
-    fun setDataSet(referenc: List<Referencias>){
-        this.items = referenc
+    fun setDataSet(list: List<References>){
+
+        this.items = list
+
     }
 
     class ReferenciasViewHolder constructor(
         itemView: View,
-        val listener: OnItemClickListener
+    val listener: OnItemClickListener
     ): RecyclerView.ViewHolder(itemView) {
 
-        private val referenciaName = itemView.person_name
-        private val referenciaTelefone = itemView.person_telefone
-        private val referenciaCpf = itemView.person_CPF
-        private val referenciaEmail = itemView.person_Email
+        private val referenciaName = itemView.input_name
+        private val referenciaTelefone = itemView.input_phone
+        private val referenciaCpf = itemView.input_CPF
+        private val referenciaEmail = itemView.input_email
         private val referenciaImagem = itemView.perfil
 
 
-        fun bind(referencia: Referencias){
+        fun bind(references: References){
 
-            referenciaName.text = referencia.nome
-            referenciaTelefone.text = referencia.telefone
-            referenciaCpf.text = referencia.cpf
-            referenciaEmail.text = referencia.email
+            referenciaName.text = references.nome
+            referenciaTelefone.text = references.telefone
+            referenciaCpf.text = references.cpf
+            referenciaEmail.text = references.email
 
             val requestOptions = RequestOptions
                 .placeholderOf(R.drawable.ic_launcher_background)
@@ -70,12 +71,14 @@ class AdapterBD(
 
             Glide.with(itemView.context)
                 .applyDefaultRequestOptions(requestOptions)
-                .load(referencia.imagem)
+                .load(references.imagem)
                 .into(referenciaImagem)
 
-            itemView.setOnClickListener {
-                listener.onClick(referencia)
+            itemView.setOnClickListener{
+                listener.onClick(references)
             }
         }
+
     }
+
 }

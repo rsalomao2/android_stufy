@@ -37,42 +37,42 @@
                 android:layout_marginStart="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nome: "
-                app:layout_constraintBottom_toTopOf="@id/telefone"
+                android:text="@string/input_name"
+                app:layout_constraintBottom_toTopOf="@id/phone"
                 app:layout_constraintStart_toEndOf="@id/perfil"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_chainStyle="spread"/>
 
             <TextView
-                android:id="@+id/person_name"
+                android:id="@+id/input_name"
                 android:layout_marginStart="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="NOME"
-                app:layout_constraintBottom_toTopOf="@id/telefone"
+                android:text=""
+                app:layout_constraintBottom_toTopOf="@id/phone"
                 app:layout_constraintStart_toEndOf="@id/name"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_chainStyle="spread"/>
 
             <TextView
-                android:id="@+id/telefone"
+                android:id="@+id/phone"
                 android:layout_marginStart="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Telefone: "
+                android:text="@string/input_phone"
                 app:layout_constraintBottom_toTopOf="@+id/CPF"
                 app:layout_constraintStart_toEndOf="@id/perfil"
                 app:layout_constraintTop_toBottomOf="@+id/name"
                 app:layout_constraintVertical_chainStyle="spread"/>
 
             <TextView
-                android:id="@+id/person_telefone"
+                android:id="@+id/input_phone"
                 android:layout_marginStart="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TELEFONE"
+                android:text=""
                 app:layout_constraintBottom_toTopOf="@+id/CPF"
-                app:layout_constraintStart_toEndOf="@id/telefone"
+                app:layout_constraintStart_toEndOf="@id/phone"
                 app:layout_constraintTop_toBottomOf="@+id/name"
                 app:layout_constraintVertical_chainStyle="spread"/>
 
@@ -82,21 +82,21 @@
                 android:layout_marginStart="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cpf: "
+                android:text="@string/input_cpf"
                 app:layout_constraintBottom_toTopOf="@id/Email"
                 app:layout_constraintStart_toEndOf="@id/perfil"
-                app:layout_constraintTop_toBottomOf="@+id/telefone"
+                app:layout_constraintTop_toBottomOf="@+id/phone"
                 app:layout_constraintVertical_chainStyle="spread"/>
 
             <TextView
-                android:id="@+id/person_CPF"
+                android:id="@+id/input_CPF"
                 android:layout_marginStart="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="CPF"
+                android:text=""
                 app:layout_constraintBottom_toTopOf="@id/Email"
                 app:layout_constraintStart_toEndOf="@id/CPF"
-                app:layout_constraintTop_toBottomOf="@+id/telefone"
+                app:layout_constraintTop_toBottomOf="@+id/phone"
                 app:layout_constraintVertical_chainStyle="spread"/>
 
             <TextView
@@ -104,18 +104,18 @@
                 android:layout_marginStart="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Email: "
+                android:text="@string/input_email"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/perfil"
                 app:layout_constraintTop_toBottomOf="@+id/CPF"
                 app:layout_constraintVertical_chainStyle="spread"/>
 
             <TextView
-                android:id="@+id/person_Email"
+                android:id="@+id/input_email"
                 android:layout_marginStart="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="EMAIL"
+                android:text=""
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/Email"
                 app:layout_constraintTop_toBottomOf="@+id/CPF"
