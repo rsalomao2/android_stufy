@@ -19,4 +19,5 @@
     <string name="input_cpf">Cpf:</string>
     <string name="input_phone">Telefone:</string>
     <string name="input_name">Nome:</string>
+    <string name="tv_nameFragmentDetail">User Name</string>
 </resources>

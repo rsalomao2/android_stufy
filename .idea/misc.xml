@@ -6,8 +6,16 @@
         <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="1.35625" />
         <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/drawable/corner.xml" value="0.337037037037037" />
         <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/drawable/corner_arrounded.xml" value="1.0" />
+        <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/drawable/corner_cardview.xml" value="1.2375" />
         <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/drawable/corner_topleft.xml" value="1.328125" />
+        <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/drawable/ctr_bg.xml" value="1.26875" />
         <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/drawable/gradient_action_bar.xml" value="1.328125" />
+        <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="1.2375" />
+        <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/drawable/ic_launcher_account_foreground.xml" value="1.2375" />
+        <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/drawable/layout_action_bar.xml" value="1.253125" />
+        <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/drawable/layout_bg.xml" value="1.26875" />
+        <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/drawable/layout_bg_adress.xml" value="1.2375" />
+        <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/layout-v28/fragment_detail.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/layout-v31/fragment_detail.xml" value="0.2848731884057971" />
         <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/layout/fragment_create_account.xml" value="0.33" />
@@ -20,6 +28,7 @@
         <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/layout/fragment_sign.xml" value="0.25" />
         <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/layout/res_item_bancodedados.xml" value="0.32382246376811596" />
         <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/layout/testando.xml" value="0.29981884057971014" />
+        <entry key="..\:/Users/Rafaeel/Desktop/projetoss/github/curso/android_stufy/app/src/main/res/mipmap-anydpi-v26/ic_launcher_account.xml" value="1.2375" />
       </map>
     </option>
   </component>
