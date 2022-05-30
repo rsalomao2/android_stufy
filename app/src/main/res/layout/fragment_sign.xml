@@ -81,9 +81,7 @@
         android:textSize="16sp"
         android:layout_below="@id/facebook_Button"
         android:gravity="center"
-        android:layout_marginTop="10dp"
-
-        />
+        android:layout_marginTop="10dp" />
 
     <TextView
         android:id="@+id/email_Button"

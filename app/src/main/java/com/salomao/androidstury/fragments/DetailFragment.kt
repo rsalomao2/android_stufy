@@ -1,13 +1,11 @@
 package com.salomao.androidstury.fragments
 
-import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.fragment.findNavController
@@ -19,6 +17,8 @@ import com.salomao.androidstury.models.DataSorce
 
 
 class DetailFragment : Fragment() {
+
+
 
     override fun onStart() {
         super.onStart()
@@ -38,7 +38,6 @@ class DetailFragment : Fragment() {
         toolbar.setupWithNavController(findNavController())
 
         items()
-
 
     }
 
