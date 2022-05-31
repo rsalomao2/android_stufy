@@ -13,12 +13,10 @@ import androidx.navigation.ui.setupWithNavController
 import com.bumptech.glide.Glide
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.salomao.androidstury.R
-import com.salomao.androidstury.models.DataSorce
+import com.salomao.androidstury.models.DataSource
 
 
 class DetailFragment : Fragment() {
-
-
 
     override fun onStart() {
         super.onStart()
@@ -36,14 +34,12 @@ class DetailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val toolbar: Toolbar = view.findViewById(R.id.toolbar) as Toolbar
         toolbar.setupWithNavController(findNavController())
-
         items()
-
     }
 
     private fun items() {
         val clickedItemId: Int? = arguments?.getInt("itemID")
-        val dataSource = DataSorce.createDataSet()
+        val dataSource = DataSource.createDataSet()
         val clickedItem = dataSource.find {
             it.id == clickedItemId
         }

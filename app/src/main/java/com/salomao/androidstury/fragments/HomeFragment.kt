@@ -10,7 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.salomao.androidstury.models.AdapterBD
-import com.salomao.androidstury.models.DataSorce
+import com.salomao.androidstury.models.DataSource
 import com.salomao.androidstury.models.References
 import com.salomao.androidstury.R
 
@@ -39,15 +39,13 @@ class HomeFragment : Fragment() {
         addDataSource()
     }
 
-
     private fun initView(view: View) {
         recyclerview = view.findViewById<RecyclerView>(R.id.recyclerview)
     }
 
     private fun addDataSource() {
-
-        val dataSource = DataSorce.createDataSet()
-        this.adapterBD.setDataSet(dataSource)
+        val dataSource = DataSource.loadUserList()
+//        this.adapterBD.setDataSet()
     }
 
     private fun initRecyclerView() {
@@ -57,15 +55,9 @@ class HomeFragment : Fragment() {
                 bundle.putInt("itemID", item.id)
                 findNavController().navigate(R.id.action_recycleView_to_detailFragment, bundle)
             }
-
         }
-
         this.adapterBD = AdapterBD(listener)
-
-
         recyclerview.layoutManager = LinearLayoutManager(requireContext())
         recyclerview.adapter = this.adapterBD
-
     }
-
 }

@@ -1,6 +1,16 @@
 package com.salomao.androidstury.models
 
-class DataSorce {
+import android.graphics.Movie
+import android.util.Log
+import com.salomao.androidstury.network.ApiUser
+import com.salomao.androidstury.network.RetrofitSetup
+import com.salomao.androidstury.network.UserNetwork
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+
+
+class DataSource {
 
     companion object {
 
@@ -127,6 +137,28 @@ class DataSorce {
             )
 
             return list
+        }
+
+        fun loadUserList() {
+            val apiInterface: ApiUser = RetrofitSetup.createService(ApiUser::class.java)
+            val call: Call<List<UserNetwork>> = apiInterface.getUsers()
+            call.enqueue(object : Callback<List<UserNetwork>> {
+                override fun onResponse(
+                    call: Call<List<UserNetwork>>,
+                    response: Response<List<UserNetwork>>
+                ) {
+                    if (response.isSuccessful) {
+                        val userNetworkList = response.body()
+                        Log.d("###", userNetworkList.toString())
+                    } else {
+                        Log.e("###", response.message())
+                    }
+                }
+
+                override fun onFailure(call: Call<List<UserNetwork>>, t: Throwable) {
+                    Log.e("###", t.message?: "")
+                }
+            })
         }
     }
 }
