@@ -139,26 +139,14 @@ class DataSource {
             return list
         }
 
-        fun loadUserList() {
-            val apiInterface: ApiUser = RetrofitSetup.createService(ApiUser::class.java)
-            val call: Call<List<UserNetwork>> = apiInterface.getUsers()
-            call.enqueue(object : Callback<List<UserNetwork>> {
-                override fun onResponse(
-                    call: Call<List<UserNetwork>>,
-                    response: Response<List<UserNetwork>>
-                ) {
-                    if (response.isSuccessful) {
-                        val userNetworkList = response.body()
-                        Log.d("###", userNetworkList.toString())
-                    } else {
-                        Log.e("###", response.message())
-                    }
-                }
-
-                override fun onFailure(call: Call<List<UserNetwork>>, t: Throwable) {
-                    Log.e("###", t.message?: "")
-                }
-            })
+        fun getUrl(): String {
+            val urlList = listOf(
+                "https://i0.wp.com/oxentesensei.com.br/wp-content/uploads/2021/04/attack-on-titan-armin-01.jpg?resize=800%2C534&ssl=1",
+                "https://i.pinimg.com/564x/bb/33/6d/bb336d93c51d7d965aa4cbd8a3e973fe.jpg",
+                "https://i.pinimg.com/474x/a8/0f/9e/a80f9e47e046bfb9e27b459f36acd66f.jpg",
+                "https://i.pinimg.com/736x/e2/b6/15/e2b615e8bbd7a1b8655c9ab2b84ab6de.jpg",
+            )
+            return urlList.random()
         }
     }
 }

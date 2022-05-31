@@ -31,7 +31,9 @@ data class UserNetwork(
     @SerializedName("username") val username: String,
     val email: String,
     val website: String,
-    val address: AddressNetwork
+    val address: AddressNetwork,
+    val phone: String,
+    val imageUrl: String
 )
 
 data class AddressNetwork(
