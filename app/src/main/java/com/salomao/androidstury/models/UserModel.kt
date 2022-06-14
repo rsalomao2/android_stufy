@@ -1,10 +1,7 @@
 package com.salomao.androidstury.models
 
-import android.graphics.drawable.Drawable
-
-data class References(
+data class UserModel(
     val id: Int,
-    val background: String,
     val imagem: String,
     val nome: String,
     val telefone: String,

@@ -7,50 +7,51 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.salomao.androidstury.R
-import com.salomao.androidstury.network.UserNetwork
-import kotlinx.android.synthetic.main.res_item_bancodedados.view.*
+import kotlinx.android.synthetic.main.res_item_bancodedados.view.input_CPF
+import kotlinx.android.synthetic.main.res_item_bancodedados.view.input_email
+import kotlinx.android.synthetic.main.res_item_bancodedados.view.input_name
+import kotlinx.android.synthetic.main.res_item_bancodedados.view.input_phone
+import kotlinx.android.synthetic.main.res_item_bancodedados.view.perfil
 
-class AdapterBD (private val listener: OnItemClickListener):
+class AdapterBD(private val listener: OnItemClickListener) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private var items: List<UserNetwork> = ArrayList()
+    private var items: List<UserModel> = ArrayList()
 
     interface OnItemClickListener {
-        fun onClick(item: UserNetwork)
+        fun onClick(item: UserModel)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return ReferenciasViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.res_item_bancodedados, parent, false),
+            LayoutInflater.from(parent.context)
+                .inflate(R.layout.res_item_bancodedados, parent, false),
             listener
         )
 
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-
-        when(holder){
-            is ReferenciasViewHolder ->{
+        when (holder) {
+            is ReferenciasViewHolder -> {
                 holder.bind(items[position])
             }
         }
-
     }
 
     override fun getItemCount(): Int {
         return items.size
     }
 
-    fun setDataSet(list: List<UserNetwork>){
-
+    fun setDataSet(list: List<UserModel>) {
         this.items = list
-
+        notifyDataSetChanged()
     }
 
     class ReferenciasViewHolder constructor(
         itemView: View,
-    val listener: OnItemClickListener
-    ): RecyclerView.ViewHolder(itemView) {
+        val listener: OnItemClickListener
+    ) : RecyclerView.ViewHolder(itemView) {
 
         private val referenciaName = itemView.input_name
         private val referenciaTelefone = itemView.input_phone
@@ -59,11 +60,11 @@ class AdapterBD (private val listener: OnItemClickListener):
         private val referenciaImagem = itemView.perfil
 
 
-        fun bind(userNetwork: UserNetwork){
+        fun bind(userModel: UserModel) {
 
-            referenciaName.text = userNetwork.name
-            referenciaTelefone.text = userNetwork.phone
-            referenciaEmail.text = userNetwork.email
+            referenciaName.text = userModel.nome
+            referenciaTelefone.text = userModel.telefone
+            referenciaEmail.text = userModel.email
 
             val requestOptions = RequestOptions
                 .placeholderOf(R.drawable.ic_launcher_background)
@@ -71,11 +72,11 @@ class AdapterBD (private val listener: OnItemClickListener):
 
             Glide.with(itemView.context)
                 .applyDefaultRequestOptions(requestOptions)
-                .load(userNetwork.imageUrl)
+                .load(userModel.imagem)
                 .into(referenciaImagem)
 
-            itemView.setOnClickListener{
-                listener.onClick(userNetwork)
+            itemView.setOnClickListener {
+                listener.onClick(userModel)
             }
         }
 

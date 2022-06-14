@@ -11,8 +11,11 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.salomao.androidstury.R
+import com.salomao.androidstury.database.ModelPreferencesManager
 import com.salomao.androidstury.models.AdapterBD
 import com.salomao.androidstury.models.DataSource
+import com.salomao.androidstury.models.UserListModel
+import com.salomao.androidstury.models.UserModel
 import com.salomao.androidstury.network.ApiUser
 import com.salomao.androidstury.network.RetrofitSetup
 import com.salomao.androidstury.network.UserNetwork
@@ -64,7 +67,14 @@ class HomeFragment : Fragment() {
                         it.copy(imageUrl = DataSource.getUrl())
                     }
                     if (!userNetworkWithUrlList.isNullOrEmpty()) {
-                        adapterBD.setDataSet(userNetworkWithUrlList)
+                        val userWithUrlList = userNetworkWithUrlList.map {
+                            convertToModel(it)
+                        }
+                        saveListOnDataBase(userWithUrlList)
+                        val userListModel =
+                            ModelPreferencesManager.get<UserListModel>(ModelPreferencesManager.USER_KEY)
+                        val userList = userListModel?.userModelList
+                        loadUserListFrom(userList)
                     }
                 } else {
                     Log.e("###", response.message())
@@ -77,9 +87,32 @@ class HomeFragment : Fragment() {
         })
     }
 
+    private fun convertToModel(userNetwork: UserNetwork): UserModel {
+        return UserModel(
+            id = userNetwork.id,
+            imagem = userNetwork.imageUrl,
+            nome = userNetwork.name,
+            telefone = userNetwork.phone,
+            cpf = "",
+            email = userNetwork.email,
+            textBio = "",
+        )
+    }
+
+    private fun loadUserListFrom(userList: List<UserModel>?) {
+        if (userList != null) {
+            adapterBD.setDataSet(userList)
+        }
+    }
+
+    private fun saveListOnDataBase(userModelWithUrlList: List<UserModel>) {
+        val userListModel = UserListModel(userModelWithUrlList)
+        ModelPreferencesManager.put(userListModel, ModelPreferencesManager.USER_KEY)
+    }
+
     private fun initRecyclerView() {
         val listener = object : AdapterBD.OnItemClickListener {
-            override fun onClick(item: UserNetwork) {
+            override fun onClick(item: UserModel) {
                 val bundle = Bundle()
                 bundle.putInt("itemID", item.id)
                 findNavController().navigate(R.id.action_recycleView_to_detailFragment, bundle)
