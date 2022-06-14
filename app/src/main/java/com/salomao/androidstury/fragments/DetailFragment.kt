@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.fragment.findNavController
@@ -13,7 +14,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.bumptech.glide.Glide
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.salomao.androidstury.R
-import com.salomao.androidstury.models.DataSource
+import com.salomao.androidstury.database.ModelPreferencesManager
 
 
 class DetailFragment : Fragment() {
@@ -39,25 +40,31 @@ class DetailFragment : Fragment() {
 
     private fun items() {
         val clickedItemId: Int? = arguments?.getInt("itemID")
-        val dataSource = DataSource.createDataSet()
-        val clickedItem = dataSource.find {
-            it.id == clickedItemId
-        }
-        view?.findViewById<CollapsingToolbarLayout>(R.id.titlle)?.title = clickedItem?.nome
+        if (clickedItemId != null){
+            val clickedItem = ModelPreferencesManager.getById(ModelPreferencesManager.USER_KEY, clickedItemId)
+            val tvTitle = view?.findViewById<CollapsingToolbarLayout>(R.id.titlle)
+            val imageView = view?.findViewById<ImageView>(R.id.im_input_image)
+            val ivProfile = view?.findViewById<ImageView>(R.id.iv_profile)
+            val tvName = view?.findViewById<TextView>(R.id.tv_userName)
+            val tvEmail = view?.findViewById<TextView>(R.id.tv_email)
 
-        val imageView = view?.findViewById<ImageView>(R.id.im_input_image)
-        if (imageView != null) {
-            Glide.with(this)
-                .load(clickedItem?.imagem)
-                .into(imageView)
-        }
+            tvTitle?.title = clickedItem?.nome
 
-        val ivProfileView = view?.findViewById<ImageView>(R.id.iv_profile)
-        if (ivProfileView != null) {
-            Glide.with(this)
-                .load(clickedItem?.imagem)
-                .circleCrop()
-                .into(ivProfileView)
+            if (imageView != null) {
+                Glide.with(this)
+                    .load(clickedItem?.imagem)
+                    .into(imageView)
+            }
+
+            if (ivProfile != null) {
+                Glide.with(this)
+                    .load(clickedItem?.imagem)
+                    .circleCrop()
+                    .into(ivProfile)
+            }
+
+            tvName?.text = clickedItem?.nome
+            tvEmail?.text = clickedItem?.email
         }
     }
 }

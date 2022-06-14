@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
 import com.google.gson.GsonBuilder
+import com.salomao.androidstury.models.UserListModel
 import com.salomao.androidstury.models.UserModel
 
 object ModelPreferencesManager {
@@ -51,5 +52,11 @@ object ModelPreferencesManager {
         //We convert this JSON String to model object. Parameter "c" (of
         //type Class < T >" is used to cast.
         return GsonBuilder().create().fromJson(value, T::class.java)
+    }
+
+    fun getById(key: String, userId: Int): UserModel? {
+        val userListModel = get<UserListModel>(key)
+        val userList = userListModel?.userModelList
+        return userList?.first { it.id == userId }
     }
 }
