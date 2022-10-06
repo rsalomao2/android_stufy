@@ -5,7 +5,6 @@ class DataSorce {
     companion object {
 
         fun createDataSet(): ArrayList<References> {
-
             val list = ArrayList<References>()
 
             list.add(
